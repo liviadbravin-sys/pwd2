@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Fácil</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h2>✓ Lista<span>Fácil</span></h2>
+    <button id="temaBtn">🌙</button>
+  </header>
+
+  <main>
+    <section class="inicio">
+      <p class="destaque">SEU DIA, DO SEU JEITO</p>
+      <h1>Organize suas <span>ideias.</span></h1>
+      <p>Adicione suas tarefas e acompanhe seu progresso.</p>
+    </section>
+
+    <section class="progresso">
+      <h3>Seu progresso de hoje</h3>
+      <p><span id="concluidas">0</span> de
+        <span id="total">0</span> tarefas concluídas</p>
+      <div class="barra-fundo">
+        <div id="barra"></div>
+      </div>
+    </section>
+
+    <section class="cartao">
+      <h2>Adicionar tarefa</h2>
+
+      <form id="formTarefa">
+        <label for="nomeTarefa">O que você precisa fazer?</label>
+        <input id="nomeTarefa" type="text"
+          placeholder="Ex.: Estudar para a prova..." required>
+
+        <label for="prioridade">Prioridade</label>
+        <select id="prioridade">
+          <option value="Normal">Normal</option>
+          <option value="Alta">Alta</option>
+          <option value="Baixa">Baixa</option>
+        </select>
+
+        <label for="prazo">Prazo (opcional)</label>
+        <input id="prazo" type="date">
+
+        <button class="adicionar" type="submit">
+          + Adicionar tarefa
+        </button>
+      </form>
+    </section>
+
+    <section class="minhas-tarefas">
+      <h2>Minhas tarefas</h2>
+
+      <div class="filtros">
+        <button data-filtro="todas">Todas</button>
+        <button data-filtro="pendentes">Pendentes</button>
+        <button data-filtro="concluidas">Concluídas</button>
+      </div>
+
+      <div id="listaTarefas"></div>
+      <p id="vazio">Nenhuma tarefa cadastrada ainda.</p>
+
+      <button id="limpar">Limpar concluídas</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito para deixar sua rotina mais leve ♡</p>
+  </footer>
+</body>
+</html>

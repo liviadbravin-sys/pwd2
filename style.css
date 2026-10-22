@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #25253b;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: white;
+  padding: 18px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7e7f0;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header span,
+.inicio h1 span {
+  color: #6c63e8;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 9px;
+  padding: 10px 14px;
+}
+
+#temaBtn {
+  background: #efedff;
+  font-size: 18px;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.inicio {
+  padding: 35px 0 20px;
+}
+
+.destaque {
+  color: #6c63e8;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.inicio h1 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.inicio p:last-child {
+  color: #77778b;
+}
+
+.progresso {
+  padding: 20px;
+  background: #eeedff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.progresso h3 {
+  margin-top: 0;
+}
+
+.barra-fundo {
+  height: 9px;
+  background: #d8d5fa;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#barra {
+  height: 100%;
+  width: 0%;
+  background: #6c63e8;
+  transition: width 0.3s;
+}
+
+.cartao {
+  background: white;
+  padding: 24px;
+  border: 1px solid #e7e7f0;
+  border-radius: 15px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dedee9;
+  border-radius: 9px;
+  background: white;
+  font-size: 14px;
+}
+
+.adicionar {
+  margin-top: 18px;
+  width: 100%;
+  background: #6c63e8;
+  color: white;
+  font-weight: bold;
+  padding: 13px;
+}
+
+.adicionar:hover {
+  background: #554bd4;
+}
+
+.minhas-tarefas {
+  padding: 35px 0;
+}
+
+.filtros {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.filtros button {
+  background: #efedff;
+  color: #554bd4;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #e7e7f0;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.tarefa input[type="checkbox"] {
+  width: 18px;
+}
+
+.detalhes {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.detalhes p {
+  margin: 0 0 6px;
+  font-weight: bold;
+}
+
+.detalhes small {
+  color: #77778b;
+}
+
+.tarefa.concluida .detalhes p {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.excluir {
+  background: #fff0f1;
+  color: #c34250;
+}
+
+#limpar {
+  background: #efedff;
+  color: #554bd4;
+}
+
+#vazio {
+  color: #77778b;
+  padding: 15px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #77778b;
+  border-top: 1px solid #e7e7f0;
+  font-size: 13px;
+}
+
+body.escuro {
+  background: #171827;
+  color: #f4f4fa;
+}
+
+body.escuro header,
+body.escuro .cartao,
+body.escuro .tarefa {
+  background: #25263a;
+  color: #f4f4fa;
+  border-color: #393a50;
+}
+
+body.escuro input,
+body.escuro select {
+  background: #25263a;
+  color: white;
+  border-color: #45465a;
+}
+
+body.escuro .progresso {
+  background: #302e4b;
+}
+
+@media (max-width: 600px) {
+  .inicio h1 {
+    font-size: 30px;
+  }
+
+  .cartao {
+    padding: 18px;
+  }
+
+  .filtros {
+    flex-wrap: wrap;
+  }
+}
